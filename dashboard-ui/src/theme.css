@@ -1,0 +1,182 @@
+:root {
+  --bg-base: #0b0e14;
+  --bg-panel: #12151f;
+  --bg-panel-hover: #171b28;
+  --border-subtle: #232838;
+  --text-primary: #e6e8ef;
+  --text-secondary: #8b92a8;
+  --accent-buy: #21c17c;
+  --accent-buy-bg: rgba(33, 193, 124, 0.12);
+  --accent-sell: #f0506e;
+  --accent-sell-bg: rgba(240, 80, 110, 0.12);
+  --accent-hold: #8b92a8;
+  --accent-hold-bg: rgba(139, 146, 168, 0.1);
+  --font-mono: ui-monospace, "JetBrains Mono", "SFMono-Regular", Menlo,
+    Consolas, monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--bg-base);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
+}
+
+.app-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.app-title .name {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.app-title .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  background: var(--accent-buy);
+  box-shadow: 0 0 0 3px var(--accent-buy-bg);
+}
+
+.app-body {
+  padding: 24px 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.signal-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 3px 9px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.signal-cell.BUY {
+  color: var(--accent-buy);
+  background: var(--accent-buy-bg);
+}
+
+.signal-cell.SELL {
+  color: var(--accent-sell);
+  background: var(--accent-sell-bg);
+}
+
+.signal-cell.HOLD {
+  color: var(--accent-hold);
+  background: var(--accent-hold-bg);
+}
+
+.grade-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grade-A {
+  color: #21c17c;
+  background: rgba(33, 193, 124, 0.14);
+}
+.grade-B {
+  color: #7cc4f7;
+  background: rgba(124, 196, 247, 0.14);
+}
+.grade-C {
+  color: #e8b339;
+  background: rgba(232, 179, 57, 0.14);
+}
+.grade-D {
+  color: #f0506e;
+  background: rgba(240, 80, 110, 0.14);
+}
+.grade-NA {
+  color: var(--text-secondary);
+  background: rgba(139, 146, 168, 0.1);
+}
+
+.level-pill {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 1px 7px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.level-support {
+  color: #7cc4f7;
+  background: rgba(124, 196, 247, 0.1);
+}
+
+.level-resistance {
+  color: #e8916b;
+  background: rgba(232, 145, 107, 0.1);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.dash {
+  color: var(--text-secondary);
+}
