@@ -206,7 +206,7 @@ app.get("/api/watchlist", async (_req, res) => {
 app.get("/api/health", (_req, res) => {  res.json({ success: true, status: "ok" });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Swing trading API running on http://localhost:${PORT}`);
   console.log(`  GET /api/signals         — CSV-based signals (fast, offline)`);
   console.log(`  GET /api/live-signals    — LIVE Yahoo Finance data (slower, real-time)`);
